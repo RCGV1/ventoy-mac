@@ -7,7 +7,7 @@ cask "ventoy2disk" do
   desc "Install Ventoy on a USB drive"
   homepage "https://github.com/fcjr/ventoy-mac"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Ventoy2Disk.app"
 
