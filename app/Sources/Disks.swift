@@ -35,7 +35,6 @@ enum DiskLister {
               partition.name != "VTOYEFI",
               let info = diskutilPlist(["info", "-plist", partition.id]),
               info["ParentWholeDisk"] as? String == disk.id,
-              info["Mounted"] as? Bool == true,
               info["VolumeName"] as? String != "VTOYEFI",
               let point = info["MountPoint"] as? String, !point.isEmpty,
               let uuid = info["VolumeUUID"] as? String, !uuid.isEmpty else {
